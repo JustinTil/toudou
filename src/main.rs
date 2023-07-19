@@ -1,3 +1,7 @@
+pub mod parser;
+
 fn main() {
-    println!("Hello, world!");
+    let cli = parser::get_args();
+    
+    dbg!(&cli);
 }
