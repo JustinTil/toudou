@@ -10,15 +10,15 @@ pub mod parser {
     pub struct Cli {
         /// Add a task to the list 
         #[arg(short = 'a', long = "add")]
-        add_flag: Option<String>,
+        pub add_flag: Option<String>,
         
         /// Check a task when it is done
         #[arg(short = 'c', long = "check")]
-        check_flag: Option<i8>,
+        pub check_flag: Option<i8>,
         
         /// Remove a task from the list
         #[arg(short = 'r', long = "remove")]
-        remove_flag: Option<i8>,
+        pub remove_flag: Option<i8>,
     }  
 }
 

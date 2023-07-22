@@ -1,7 +1,12 @@
 pub mod parser;
+pub mod file_read_write;
 
 fn main() {
-    let cli = parser::get_args();
+    #[allow(unused)]
+    let cli_args = parser::get_args();
     
-    dbg!(&cli);
+    let filename = "toudou.txt";
+    let mut tasklist = file_read_write::read_lines(filename);
+    
+    dbg!(&tasklist);
 }
