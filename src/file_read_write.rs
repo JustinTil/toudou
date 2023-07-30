@@ -8,7 +8,7 @@ pub fn read_lines(filename: &str) -> Vec<String> {
         .collect()
 }
 
-pub fn write_tasklist_to_file(tasklist: Vec<String>, filename: &str) -> Result<(), std::io::Error>{
+pub fn write_tasklist_to_file(tasklist: &Vec<String>, filename: &str) -> Result<(), std::io::Error>{
     let mut f  = std::fs::File::create(filename).unwrap();
         
     for task in tasklist {

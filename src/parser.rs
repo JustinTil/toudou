@@ -12,13 +12,9 @@ pub mod parser {
         #[arg(short = 'a', long = "add")]
         pub add_flag: Option<String>,
         
-        /// Check a task when it is done
-        #[arg(short = 'c', long = "check")]
-        pub check_flag: Option<i8>,
-        
         /// Remove a task from the list
         #[arg(short = 'r', long = "remove")]
-        pub remove_flag: Option<i8>,
+        pub remove_flag: Option<usize>,
     }  
 }
 
